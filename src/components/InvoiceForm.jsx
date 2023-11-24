@@ -95,6 +95,7 @@ const InvoiceForm = () => {
   };
 
   const handleCalculateTotal = () => {
+  
     setFormData((prevFormData) => {
       let subTotal = 0;
 
@@ -193,7 +194,7 @@ const InvoiceForm = () => {
           </Link>
         </div>
       </div>
-
+ 
       <Row>
         <Col md={8} lg={9}>
           <Card className="p-4 p-xl-5 my-3 my-xl-4">

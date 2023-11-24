@@ -11,12 +11,22 @@ export const useInvoiceListData = () => {
       ) || null
     );
   };
+  const getSelectedInvoices = async (receivedIds) => {
+    const selectedInvoices = []
 
+    for (const id of receivedIds) {
+      const singleInvoice = await getOneInvoice(id)
+      selectedInvoices.push(singleInvoice)
+    }
+
+    return selectedInvoices
+  }
   const listSize = invoiceList.length;
 
   return {
     invoiceList,
     getOneInvoice,
     listSize,
+    getSelectedInvoices
   };
 };
