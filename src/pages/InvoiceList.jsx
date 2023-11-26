@@ -99,7 +99,7 @@ const InvoiceList = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {invoiceList.map((invoice) => (
+                  {invoiceList?.map((invoice) => (
                     <InvoiceRow
                       key={invoice.id}
                       invoice={invoice}
